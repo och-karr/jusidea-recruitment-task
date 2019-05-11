@@ -1,0 +1,14 @@
+
+
+//Icons dims and positioning
+
+$icon-dim: 80px; // icon width/height
+$space-to-icon: 20px; // space between icon and main image (circle)
+
+$sin30: 0.5;
+$sin60: 0.866;
+
+// distances for the absolute element counted from the upper left corner
+// of the relative element
+$sm-dist: 50% * (1 - $sin60);
+$md-dist: 50% * (1 - $sin30);

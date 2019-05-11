@@ -3,3 +3,102 @@ PROJECT STYLES
 ==============
 Imports all project style components.
 */
+@font-face {
+  font-family: 'title-font-400';
+  src: url("../fonts/Hind/Hind-Regular.ttf"); }
+
+@font-face {
+  font-family: 'main-font-400';
+  src: url("../fonts/Roboto/Roboto-Regular.ttf"); }
+
+@font-face {
+  font-family: 'main-font-700';
+  src: url("../fonts/Roboto/Roboto-Bold.ttf"); }
+
+body {
+  background-color: azure; }
+
+h1 {
+  font-family: title-font-400; }
+
+p {
+  font-family: main-font-400; }
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .main--circle-container {
+    position: relative;
+    padding: 60px;
+    margin: auto; }
+    @media all and (min-width: 1024px) {
+      .main--circle-container {
+        width: 596px; } }
+    .main--circle-container .main--circle {
+      width: 100%;
+      height: 0;
+      margin: 0;
+      padding-bottom: 100%;
+      background-image: url("../images/main-img.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      border-radius: 50%;
+      box-sizing: border-box; }
+      .main--circle-container .main--circle .el {
+        display: flex;
+        position: absolute;
+        margin: -40px;
+        padding: 15px;
+        width: 80px;
+        height: 80px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 1px solid black; }
+        .main--circle-container .main--circle .el-icon {
+          display: block;
+          width: 100%;
+          object-fit: contain; }
+      .main--circle-container .main--circle .w-el {
+        top: 50%;
+        left: 0; }
+      .main--circle-container .main--circle .n-el {
+        top: 0;
+        left: 50%; }
+      .main--circle-container .main--circle .e-el {
+        top: 50%;
+        left: 100%; }
+      .main--circle-container .main--circle .s-el {
+        top: 100%;
+        left: 50%; }
+      .main--circle-container .main--circle .nw1-el {
+        top: 25%;
+        left: 6.7%; }
+      .main--circle-container .main--circle .nw2-el {
+        top: 6.7%;
+        left: 25%; }
+      .main--circle-container .main--circle .ne1-el {
+        top: 6.7%;
+        left: 75%; }
+      .main--circle-container .main--circle .ne2-el {
+        top: 25%;
+        left: 93.3%; }
+      .main--circle-container .main--circle .se1-el {
+        top: 75%;
+        left: 93.3%; }
+      .main--circle-container .main--circle .se2-el {
+        top: 93.3%;
+        left: 75%; }
+      .main--circle-container .main--circle .sw1-el {
+        top: 93.3%;
+        left: 25%; }
+      .main--circle-container .main--circle .sw2-el {
+        top: 75%;
+        left: 6.7%; }
+
+.footer {
+  width: 100%;
+  height: 200px;
+  background-color: #274291; }

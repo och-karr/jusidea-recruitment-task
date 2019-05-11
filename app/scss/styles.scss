@@ -3,3 +3,16 @@ PROJECT STYLES
 ==============
 Imports all project style components.
 */
+
+// Variables
+@import "variables/colors";
+@import "variables/fonts";
+@import "variables/variables";
+
+// Base
+@import "base/base";
+@import "base/typography";
+
+// Modules
+@import "modules/main";
+@import "modules/footer";

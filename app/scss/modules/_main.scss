@@ -1,0 +1,111 @@
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--circle-container {
+        position: relative;
+        padding: 0.5 * $icon-dim + $space-to-icon;
+        margin: auto;
+
+        @media all and (min-width: 1024px) {
+            width: 596px;
+        }
+
+        .main--circle {
+            width: 100%;
+            height: 0;
+            margin: 0;
+            padding-bottom: 100%;
+            background-image: url('../images/main-img.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            border-radius: 50%;
+            box-sizing: border-box;
+      
+            .el {
+                display: flex;
+                position: absolute;
+                margin: - 0.5 * $icon-dim;
+                padding: 15px;
+                width: $icon-dim;
+                height: $icon-dim;
+                box-sizing: border-box;
+                border-radius: 50%;
+                border: 1px solid black;
+        
+                &-icon { 
+                    display: block; width: 100%; 
+                    object-fit: contain;
+                }
+            }
+
+            .w-el {
+                top: 50%;
+                left: 0;
+            }
+              
+            .n-el {
+                top: 0;
+                left: 50%;
+            }
+            
+            .e-el {
+                top: 50%;
+                left: 100%;
+            }
+            
+            .s-el {
+                top: 100%;
+                left: 50%;
+            }
+            
+            //1st quarter
+            .nw1-el {
+                top: $md-dist;
+                left: $sm-dist;
+            }
+            
+            .nw2-el {
+                top: $sm-dist;
+                left: $md-dist;
+            }
+            
+            //2nd quarter
+            .ne1-el {
+                top: $sm-dist;
+                left: 100% - $md-dist;
+            }
+            
+            .ne2-el {
+                top: $md-dist;
+                left: 100% - $sm-dist;
+            }
+            
+            //3rd quarter
+            .se1-el {
+                top: 100% - $md-dist;
+                left: 100% - $sm-dist;
+            }
+            
+            .se2-el {
+                top: 100% - $sm-dist;
+                left: 100% - $md-dist;
+            }
+            
+            //4th quarter
+            .sw1-el {
+                top: 100% - $sm-dist;
+                left: $md-dist;
+            }
+            
+            .sw2-el {
+                top: 100% - $md-dist;
+                left: $sm-dist;
+            }
+        }
+    }   
+}
+  
