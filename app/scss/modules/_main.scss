@@ -4,10 +4,24 @@
     flex-direction: column;
     justify-content: center;
 
+    &--title {
+        color: $main-text-clr;
+        text-align: center;
+        margin: 66px 0 32px 0;
+    }
+
+    &--subtitle {
+        color: $sub-text-clr;
+        text-align: center;
+        margin-bottom: 97px;
+    }
+
     &--circle-container {
         position: relative;
         padding: 0.5 * $icon-dim + $space-to-icon;
         margin: auto;
+        margin-top: 0.5 * $icon-dim;
+        margin-bottom: 0.5 * $icon-dim + $icon-padding + 33px;  //add .el-text line-height
 
         @media all and (min-width: 1024px) {
             width: 596px;
@@ -24,21 +38,72 @@
             background-position: center;
             border-radius: 50%;
             box-sizing: border-box;
+
+            .main--circle-title {
+                text-transform: uppercase;
+                color: $white;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
       
             .el {
                 display: flex;
                 position: absolute;
                 margin: - 0.5 * $icon-dim;
-                padding: 15px;
+                padding: $icon-padding;
                 width: $icon-dim;
                 height: $icon-dim;
                 box-sizing: border-box;
                 border-radius: 50%;
-                border: 1px solid black;
-        
-                &-icon { 
-                    display: block; width: 100%; 
-                    object-fit: contain;
+                background-color: $icon-bcg;
+                border: 3px solid $icon-border;
+
+                &-link {
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    color: $main-text-clr;
+                    text-decoration: none;
+                    position: relative;
+
+                    .el-icon { 
+                        display: block; width: 100%; 
+                        object-fit: contain;
+                    }
+    
+                    .el-text{
+                        font-family: title-font-600;
+                        font-size: 16px;
+                        line-height: 33px;
+                        position: absolute;
+                        width: max-content;
+                    }
+
+                    .el-text-right {
+                        top: 50% -33px; //substract .el-text line-height
+                        left: $icon-dim;
+                    }
+
+                    .el-text-left {
+                        top: 50% -33px; //substract .el-text line-height
+                        right: $icon-dim;
+                    }
+
+                    .el-text-top {
+                        bottom: $icon-dim;
+                    }
+
+                    .el-text-bottom {
+                        top: $icon-dim;
+                    }
                 }
             }
 

@@ -8,6 +8,10 @@ Imports all project style components.
   src: url("../fonts/Hind/Hind-Regular.ttf"); }
 
 @font-face {
+  font-family: 'title-font-600';
+  src: url("../fonts/Hind/Hind-SemiBold.ttf"); }
+
+@font-face {
   font-family: 'main-font-400';
   src: url("../fonts/Roboto/Roboto-Regular.ttf"); }
 
@@ -15,24 +19,47 @@ Imports all project style components.
   font-family: 'main-font-700';
   src: url("../fonts/Roboto/Roboto-Bold.ttf"); }
 
+* {
+  margin: 0;
+  padding: 0; }
+
 body {
   background-color: azure; }
 
 h1 {
-  font-family: title-font-400; }
+  font-family: title-font-600;
+  font-size: 36px;
+  line-height: 31.07px; }
+
+h2 {
+  font-family: main-font-700;
+  font-size: 14px;
+  line-height: 18px; }
 
 p {
-  font-family: main-font-400; }
+  font-family: main-font-400;
+  font-size: 16px;
+  line-height: 24px; }
 
 .main {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  .main--title {
+    color: #2f2f2f;
+    text-align: center;
+    margin: 66px 0 32px 0; }
+  .main--subtitle {
+    color: #565e66;
+    text-align: center;
+    margin-bottom: 97px; }
   .main--circle-container {
     position: relative;
-    padding: 60px;
-    margin: auto; }
+    padding: 61px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 88px; }
     @media all and (min-width: 1024px) {
       .main--circle-container {
         width: 596px; } }
@@ -47,6 +74,17 @@ p {
       background-position: center;
       border-radius: 50%;
       box-sizing: border-box; }
+      .main--circle-container .main--circle .main--circle-title {
+        text-transform: uppercase;
+        color: #fff;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
       .main--circle-container .main--circle .el {
         display: flex;
         position: absolute;
@@ -56,11 +94,37 @@ p {
         height: 80px;
         box-sizing: border-box;
         border-radius: 50%;
-        border: 1px solid black; }
-        .main--circle-container .main--circle .el-icon {
-          display: block;
+        background-color: #f4f7f9;
+        border: 3px solid #d4dbe0; }
+        .main--circle-container .main--circle .el-link {
+          display: flex;
           width: 100%;
-          object-fit: contain; }
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+          color: #2f2f2f;
+          text-decoration: none;
+          position: relative; }
+          .main--circle-container .main--circle .el-link .el-icon {
+            display: block;
+            width: 100%;
+            object-fit: contain; }
+          .main--circle-container .main--circle .el-link .el-text {
+            font-family: title-font-600;
+            font-size: 16px;
+            line-height: 33px;
+            position: absolute;
+            width: max-content; }
+          .main--circle-container .main--circle .el-link .el-text-right {
+            top: 50% -33px;
+            left: 80px; }
+          .main--circle-container .main--circle .el-link .el-text-left {
+            top: 50% -33px;
+            right: 80px; }
+          .main--circle-container .main--circle .el-link .el-text-top {
+            bottom: 80px; }
+          .main--circle-container .main--circle .el-link .el-text-bottom {
+            top: 80px; }
       .main--circle-container .main--circle .w-el {
         top: 50%;
         left: 0; }
