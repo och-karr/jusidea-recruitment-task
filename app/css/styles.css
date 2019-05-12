@@ -41,6 +41,11 @@ p {
   font-size: 16px;
   line-height: 24px; }
 
+.form-text, .footer--form-input, .footer--form-input::placeholder, .footer--form .form-select, .footer--form-textarea::placeholder {
+  font-family: main-font-400;
+  font-size: 16px;
+  line-height: 24px; }
+
 .main {
   width: 100%;
   display: flex;
@@ -186,7 +191,6 @@ p {
               .main--circle-container .main--circle .el-link .el-text {
                 width: calc(100vw - 135px); } }
           .main--circle-container .main--circle .el-link .el-text-right {
-            top: calc(50% -$el-text-line-height);
             left: 80px; }
             @media all and (max-width: 1024px) {
               .main--circle-container .main--circle .el-link .el-text-right {
@@ -195,7 +199,6 @@ p {
               .main--circle-container .main--circle .el-link .el-text-right {
                 left: 160%; } }
           .main--circle-container .main--circle .el-link .el-text-left {
-            top: calc(50% -$el-text-line-height);
             right: 80px; }
             @media all and (max-width: 1024px) {
               .main--circle-container .main--circle .el-link .el-text-left {
@@ -207,31 +210,30 @@ p {
               .main--circle-container .main--circle .el-link .el-text-left {
                 right: 0;
                 left: 160%; } }
-          .main--circle-container .main--circle .el-link .el-text-top {
-            bottom: 80px; }
-            @media all and (max-width: 1024px) {
-              .main--circle-container .main--circle .el-link .el-text-top {
-                bottom: 65px; } }
-            @media all and (max-width: 768px) {
-              .main--circle-container .main--circle .el-link .el-text-top {
-                bottom: 160%; } }
-            @media all and (max-width: 575px) {
-              .main--circle-container .main--circle .el-link .el-text-top {
-                bottom: 0;
-                top: calc(50% -$el-text-line-height);
-                left: 160%; } }
-          .main--circle-container .main--circle .el-link .el-text-bottom {
-            top: 80px; }
-            @media all and (max-width: 1024px) {
-              .main--circle-container .main--circle .el-link .el-text-bottom {
-                top: 65px; } }
-            @media all and (max-width: 768px) {
-              .main--circle-container .main--circle .el-link .el-text-bottom {
-                top: 160%; } }
-            @media all and (max-width: 575px) {
-              .main--circle-container .main--circle .el-link .el-text-bottom {
-                top: calc(50% -$el-text-line-height);
-                left: 160%; } }
+          @media all and (min-width: 1025px) {
+            .main--circle-container .main--circle .el-link .el-text-top {
+              bottom: 80px; } }
+          @media all and (min-width: 768px) {
+            .main--circle-container .main--circle .el-link .el-text-top {
+              bottom: 65px; } }
+          @media all and (min-width: 576px) {
+            .main--circle-container .main--circle .el-link .el-text-top {
+              bottom: 160%; } }
+          @media all and (max-width: 575px) {
+            .main--circle-container .main--circle .el-link .el-text-top {
+              left: 160%; } }
+          @media all and (min-width: 1025px) {
+            .main--circle-container .main--circle .el-link .el-text-bottom {
+              top: 80px; } }
+          @media all and (min-width: 768px) {
+            .main--circle-container .main--circle .el-link .el-text-bottom {
+              top: 65px; } }
+          @media all and (min-width: 576px) {
+            .main--circle-container .main--circle .el-link .el-text-bottom {
+              top: 160%; } }
+          @media all and (max-width: 575px) {
+            .main--circle-container .main--circle .el-link .el-text-bottom {
+              left: 160%; } }
       .main--circle-container .main--circle .w-el {
         top: 50%;
         left: 0; }
@@ -309,7 +311,12 @@ p {
       width: 306px;
       padding: 19px 13px 15px 13px;
       box-sizing: border-box;
-      margin-bottom: 18px; }
+      margin-bottom: 18px;
+      color: #2f2f2f;
+      border-radius: 5px;
+      border: 1px solid #dbdbdb; }
+      .footer--form-input::placeholder {
+        color: #565e66; }
       @media all and (max-width: 1024px) {
         .footer--form-input {
           width: 32%; } }
@@ -319,8 +326,17 @@ p {
       @media all and (max-width: 575px) {
         .footer--form-input {
           width: 100%; } }
+    .footer--form .form-select {
+      color: #565e66; }
     .footer--form-textarea {
-      width: 100%; }
+      width: 100%;
+      height: 124px;
+      padding: 19px 13px 15px 13px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: 1px solid #dbdbdb; }
+      .footer--form-textarea::placeholder {
+        color: #565e66; }
     .footer--form-check {
       width: 100%; }
     .footer--form-submit {

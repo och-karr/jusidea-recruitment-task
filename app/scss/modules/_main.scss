@@ -176,7 +176,7 @@
                     }
 
                     .el-text-right {
-                        top: calc(50% -$el-text-line-height); //substract .el-text line-height
+                        // top: calc(50% -$el-text-line-height); //substract .el-text line-height
                         left: $icon-dim;
 
                         @media all and (max-width: 1024px) {
@@ -193,7 +193,7 @@
                     }
 
                     .el-text-left {
-                        top: calc(50% -$el-text-line-height); //substract .el-text line-height
+                        // top: calc(50% -$el-text-line-height); //substract .el-text line-height
                         right: $icon-dim;
 
                         @media all and (max-width: 1024px) {
@@ -211,36 +211,39 @@
                     }
 
                     .el-text-top {
-                        bottom: $icon-dim;
+                        
+                        @media all and (min-width: 1025px) {
+                            bottom: $icon-dim;
+                        }
 
-                        @media all and (max-width: 1024px) {
+                        @media all and (min-width: 768px) {
                             bottom: 65px;
                         }
 
-                        @media all and (max-width: 768px) {
+                        @media all and (min-width: 576px) {
                             bottom: 160%;
                         }
 
                         @media all and (max-width: 575px) {
-                            bottom: 0;
-                            top: calc(50% -$el-text-line-height);
                             left: 160%;
                         }
                     }
 
                     .el-text-bottom {
-                        top: $icon-dim;
 
-                        @media all and (max-width: 1024px) {
+                        @media all and (min-width: 1025px) {
+                            top: $icon-dim;
+                        }
+
+                        @media all and (min-width: 768px) {
                             top: 65px;
                         }
 
-                        @media all and (max-width: 768px) {
+                        @media all and (min-width: 576px) {
                             top: 160%;
                         }
 
                         @media all and (max-width: 575px) {
-                            top: calc(50% -$el-text-line-height);
                             left: 160%;
                         }
                     }
