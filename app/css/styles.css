@@ -49,30 +49,30 @@ p {
   flex-direction: column;
   justify-content: center; }
   .main--title {
-    color: #2f2f2f;
-    text-align: center;
     margin: 66px 0 32px 0;
+    padding: 0 15px;
     box-sizing: border-box;
-    padding: 0 15px; }
+    text-align: center;
+    color: #2f2f2f; }
     @media all and (max-width: 575px) {
       .main--title {
         margin: 30px 0 15px 0; } }
   .main--subtitle {
-    color: #565e66;
-    text-align: center;
     margin-bottom: 97px;
+    padding: 0 15px;
     box-sizing: border-box;
-    padding: 0 15px; }
+    text-align: center;
+    color: #565e66; }
     @media all and (max-width: 575px) {
       .main--subtitle {
         margin-bottom: 0; } }
   .main--circle-container {
     width: 40%;
-    position: relative;
-    padding: 61px;
     margin: auto;
     margin-top: 40px;
-    margin-bottom: 296px; }
+    margin-bottom: 296px;
+    padding: 61px;
+    position: relative; }
     @media all and (min-width: 1200px) {
       .main--circle-container {
         width: 596px; } }
@@ -84,14 +84,14 @@ p {
         margin-bottom: 170px; } }
     @media all and (max-width: 575px) {
       .main--circle-container {
-        position: static;
         width: 100%;
+        margin: auto;
         padding: 0;
-        margin: auto; } }
+        position: static; } }
     .main--circle-container .main--circle-title-container {
-      position: absolute;
-      height: 100%;
       width: 100%;
+      height: 100%;
+      position: absolute;
       top: 0;
       left: 0;
       display: flex;
@@ -99,15 +99,15 @@ p {
       justify-content: center; }
       @media all and (max-width: 575px) {
         .main--circle-container .main--circle-title-container {
-          position: static;
-          margin: 30px 0;
           width: 100%;
           height: auto;
+          margin: 30px 0;
+          position: static;
           background-color: #274291; } }
       .main--circle-container .main--circle-title-container .main--circle-title {
         text-transform: uppercase;
-        color: #fff;
-        text-align: center; }
+        text-align: center;
+        color: #fff; }
         @media all and (min-width: 576px) and (max-width: 1024px) {
           .main--circle-container .main--circle-title-container .main--circle-title {
             width: 30%; } }
@@ -123,29 +123,29 @@ p {
       height: 0;
       margin: 0;
       padding-bottom: 100%;
+      box-sizing: border-box;
       background-image: url("../images/main-img.svg");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      border-radius: 50%;
-      box-sizing: border-box; }
+      border-radius: 50%; }
       @media all and (max-width: 575px) {
         .main--circle-container .main--circle {
-          background: none;
           height: auto;
           padding: 0 15px;
-          padding-bottom: 30px; } }
+          padding-bottom: 30px;
+          background: none; } }
       .main--circle-container .main--circle .el {
-        display: flex;
-        position: absolute;
-        margin: -40px;
-        padding: 15px;
         width: 80px;
         height: 80px;
+        margin: -40px;
+        padding: 15px;
+        position: absolute;
+        display: flex;
         box-sizing: border-box;
-        border-radius: 50%;
         background-color: #f4f7f9;
-        border: 3px solid #d4dbe0; }
+        border: 3px solid #d4dbe0;
+        border-radius: 50%; }
         @media all and (min-width: 576px) and (max-width: 768px) {
           .main--circle-container .main--circle .el {
             width: 18%;
@@ -154,19 +154,19 @@ p {
             padding: 10px; } }
         @media all and (max-width: 575px) {
           .main--circle-container .main--circle .el {
-            position: static;
             margin: 0;
-            display: block;
-            margin-top: 7px; } }
+            margin-top: 7px;
+            position: static;
+            display: block; } }
         .main--circle-container .main--circle .el-link {
-          display: flex;
           width: 100%;
           height: 100%;
+          position: relative;
+          display: flex;
           align-items: center;
           justify-content: center;
           color: #2f2f2f;
-          text-decoration: none;
-          position: relative; }
+          text-decoration: none; }
           .main--circle-container .main--circle .el-link .el-icon {
             display: block;
             width: 100%;
@@ -270,15 +270,15 @@ p {
 
 .footer {
   width: 100%;
+  padding: 62px 15px 56px 15px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #274291;
   background-image: url("../images/form-bcg-img.svg");
   background-position-x: center;
-  background-position-y: top;
-  padding: 62px 15px 56px 15px;
-  box-sizing: border-box; }
+  background-position-y: top; }
   @media all and (min-width: 768px) {
     .footer {
       height: 642px; } }
@@ -287,18 +287,18 @@ p {
     text-align: center;
     margin-bottom: 27px; }
   .footer--subtitle {
+    margin-bottom: 48px;
     font-size: 18px;
     color: #fff;
-    text-align: center;
-    margin-bottom: 48px; }
+    text-align: center; }
     .footer--subtitle-phone {
       font-family: 'main-font-700';
       text-decoration: none;
       color: #fff; }
   .footer--form {
     width: 951px;
-    display: flex;
     margin: auto;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
     @media all and (max-width: 1024px) {
@@ -306,9 +306,9 @@ p {
         width: 100%; } }
     .footer--form-input {
       width: 306px;
+      margin-bottom: 18px;
       padding: 19px 13px 15px 13px;
       box-sizing: border-box;
-      margin-bottom: 18px;
       color: #2f2f2f;
       border-radius: 5px;
       border: 1px solid #dbdbdb; }
@@ -339,11 +339,11 @@ p {
         color: #565e66; }
     .footer--form-checkbox {
       width: 100%;
+      padding: 32px 0 34px 24px;
       font-family: main-font-400;
       font-size: 14px;
       line-height: 16px;
       color: #fff;
-      padding: 32px 0 34px 24px;
       text-align: center; }
       .footer--form-checkbox .checkbox-input {
         display: none; }
@@ -352,25 +352,25 @@ p {
       .footer--form-checkbox .checkbox-label-text {
         position: relative; }
         .footer--form-checkbox .checkbox-label-text .checkmark {
+          height: 15px;
+          width: 15px;
           position: absolute;
           top: 0;
           left: -24px;
           z-index: 5;
-          height: 15px;
-          width: 15px;
           background-color: #fff;
           border-radius: 3px;
           border: 1px solid #dbdbdb; }
           .footer--form-checkbox .checkbox-label-text .checkmark:after {
-            left: 4px;
             width: 5px;
             height: 10px;
+            position: absolute;
+            left: 4px;
+            display: none;
             border: solid black;
             border-width: 0 3px 3px 0;
             transform: rotate(45deg);
-            content: "";
-            position: absolute;
-            display: none; }
+            content: ""; }
         .footer--form-checkbox .checkbox-label-text .check-link {
           color: #35a8e0;
           text-decoration: none; }
@@ -379,12 +379,12 @@ p {
       height: 52px;
       margin: auto;
       box-sizing: border-box;
-      border: none;
-      border-radius: 5px;
-      background-color: #35a8e0;
-      cursor: pointer;
-      color: #fff;
       font-family: main-font-700;
       font-size: 14px;
       line-height: 18px;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      border: none;
+      border-radius: 5px;
+      background-color: #35a8e0;
+      color: #fff;
+      cursor: pointer; }

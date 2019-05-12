@@ -1,5 +1,7 @@
 .footer {
     width: 100%;
+    padding: 62px 15px 56px 15px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,8 +9,6 @@
     background-image: url('../images/form-bcg-img.svg');
     background-position-x: center;
     background-position-y: top;
-    padding: 62px 15px 56px 15px;
-    box-sizing: border-box;
 
     @media all and (min-width: 768px) {
         height: 642px;
@@ -21,10 +21,10 @@
     }
 
     &--subtitle {
+        margin-bottom: 48px;
         font-size: 18px;
         color: $white;
         text-align: center;
-        margin-bottom: 48px;
 
         &-phone {
             font-family: 'main-font-700';
@@ -35,8 +35,8 @@
 
     &--form {
         width: 951px;
-        display: flex;
         margin: auto;
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
 
@@ -45,11 +45,11 @@
         }
 
         &-input {
+            @extend .form-text;
             width: 306px;
+            margin-bottom: 18px;
             padding: 19px 13px 15px 13px;
             box-sizing: border-box;
-            margin-bottom: 18px;
-            @extend .form-text;
             color: $main-text-clr;
             border-radius: 5px;
             border: 1px solid $form-border;
@@ -78,10 +78,6 @@
             appearance: none;
             background: url("../images/symbols/arrow.svg") 95% / 20% no-repeat $white;
             background-size: 13px;
-
-            &-opt {
-                
-            }
         }
 
         &-textarea {
@@ -96,19 +92,15 @@
                 @extend .form-text;
                 color: $sub-text-clr;
             }
-
-        //     @media all and (max-width: 575px) {
-        //         width: 100%;
-        //     }
         }
 
         &-checkbox {
             width: 100%;
+            padding: 32px 0 34px 24px;
             font-family: main-font-400;
             font-size: 14px;
             line-height: 16px;
             color: $white;
-            padding: 32px 0 34px 24px;
             text-align: center;
 
             .checkbox-input {
@@ -123,26 +115,26 @@
                 position: relative;
 
                 .checkmark {
+                    height: 15px;
+                    width: 15px;
                     position: absolute;
                     top: 0;
                     left: -24px;
                     z-index: 5;
-                    height: 15px;
-                    width: 15px;
                     background-color: $white;
                     border-radius: 3px;
                     border: 1px solid $form-border;
             
                     &:after {
-                        left: 4px;
                         width: 5px;
                         height: 10px;
+                        position: absolute;
+                        left: 4px;
+                        display: none;
                         border: solid black;
                         border-width: 0 3px 3px 0;
                         transform: rotate(45deg);
                         content: "";
-                        position: absolute;
-                        display: none;
                     }
                 }
 
@@ -158,15 +150,15 @@
             height: 52px;
             margin: auto;
             box-sizing: border-box;
-            border: none;
-            border-radius: 5px;
-            background-color: $detail-clr;
-            cursor: pointer;
-            color: $white;
             font-family: main-font-700;
             font-size: 14px;
             line-height: 18px;
             text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            background-color: $detail-clr;
+            color: $white;
+            cursor: pointer;
         }
     }
 }

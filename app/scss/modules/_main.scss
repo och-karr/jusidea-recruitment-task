@@ -4,24 +4,24 @@
     flex-direction: column;
     justify-content: center;
 
-    &--title {
-        color: $main-text-clr;
-        text-align: center;
+    &--title {   
         margin: 66px 0 32px 0;
-        box-sizing: border-box;
         padding: 0 15px;
-
+        box-sizing: border-box;
+        text-align: center;
+        color: $main-text-clr;
+        
         @media all and (max-width: 575px) {
             margin: 30px 0 15px 0;
         }
     }
 
     &--subtitle {
-        color: $sub-text-clr;
-        text-align: center;
         margin-bottom: 97px;
-        box-sizing: border-box;
         padding: 0 15px;
+        box-sizing: border-box;
+        text-align: center;
+        color: $sub-text-clr;
 
         @media all and (max-width: 575px) {
             margin-bottom: 0;
@@ -30,11 +30,11 @@
 
     &--circle-container {
         width: 40%;
-        position: relative;
-        padding: 0.5 * $icon-dim + $space-to-icon;
         margin: auto;
         margin-top: 0.5 * $icon-dim;
-        margin-bottom: 0.5 * $icon-dim + $icon-padding + $el-text-line-height +208px;  //33 - add .el-text line-height
+        margin-bottom: 0.5 * $icon-dim + $icon-padding + $el-text-line-height +208px;
+        padding: 0.5 * $icon-dim + $space-to-icon;
+        position: relative;
 
         @media all and (min-width: 1200px) {
             width: 596px;
@@ -48,20 +48,17 @@
             margin-bottom: 170px;
         }
 
-        @media all and (max-width: 768px) {
-        }
-
         @media all and (max-width: 575px) {
-            position: static;
             width: 100%;
-            padding: 0;
             margin:auto;
+            padding: 0;
+            position: static;
         }
 
         .main--circle-title-container {
-            position: absolute;
-            height: 100%;
             width: 100%;
+            height: 100%;
+            position: absolute;
             top: 0;
             left: 0;
             display: flex;
@@ -69,17 +66,17 @@
             justify-content: center;
 
             @media all and (max-width: 575px) {
-                position: static;
-                margin: 30px 0;
                 width: 100%;
                 height: auto;
+                margin: 30px 0;
+                position: static;
                 background-color: $footer-bcg;
             }
 
             .main--circle-title {
                 text-transform: uppercase;
-                color: $white;
                 text-align: center;
+                color: $white;
 
                 @media all and (min-width: 576px) and (max-width: 1024px) {
                     width: 30%;
@@ -101,31 +98,31 @@
             height: 0;
             margin: 0;
             padding-bottom: 100%;
+            box-sizing: border-box;
             background-image: url('../images/main-img.svg');
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
             border-radius: 50%;
-            box-sizing: border-box;
 
             @media all and (max-width: 575px) {
-                background: none;
                 height: auto;
                 padding: 0 15px;
                 padding-bottom: 30px;
+                background: none; 
             }
       
             .el {
-                display: flex;
-                position: absolute;
-                margin: - 0.5 * $icon-dim;
-                padding: $icon-padding;
                 width: $icon-dim;
                 height: $icon-dim;
+                margin: - 0.5 * $icon-dim;
+                padding: $icon-padding;
+                position: absolute;
+                display: flex;
                 box-sizing: border-box;
-                border-radius: 50%;
                 background-color: $icon-bcg;
                 border: 3px solid $icon-border;
+                border-radius: 50%;
 
                 @media all and (min-width: 576px) and (max-width: 768px) {
                     width: 18%;
@@ -135,22 +132,21 @@
                 }
 
                 @media all and (max-width: 575px) {
-                    position: static;
                     margin: 0;
-                    display: block;
                     margin-top: 7px;
+                    position: static;
+                    display: block;
                 }
 
-
                 &-link {
-                    display: flex;
                     width: 100%;
                     height: 100%;
+                    position: relative;
+                    display: flex;
                     align-items: center;
                     justify-content: center;
                     color: $main-text-clr;
                     text-decoration: none;
-                    position: relative;
 
                     .el-icon { 
                         display: block; width: 100%; 
@@ -179,7 +175,6 @@
                     }
 
                     .el-text-right {
-                        // top: calc(50% -$el-text-line-height); //substract .el-text line-height
                         left: $icon-dim;
 
                         @media all and (max-width: 1024px) {
@@ -189,14 +184,9 @@
                         @media all and (max-width: 768px) {
                             left: 160%;
                         }
-
-                        @media all and (max-width: 575px) {
-
-                        }
                     }
 
                     .el-text-left {
-                        // top: calc(50% -$el-text-line-height); //substract .el-text line-height
                         right: $icon-dim;
 
                         @media all and (max-width: 1024px) {
