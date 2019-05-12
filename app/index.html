@@ -78,15 +78,23 @@
                 <option class="form-select-opt" value="2">50</option>
                 <option class="form-select-opt" value="3">150</option>
             </select>
-            <select class="footer--form-input form-select">
+            <select class="footer--form-input form-select" id="form-select">
                 <option class="form-select-opt" value="0">Roczny dochód firmy</option>
                 <option class="form-select-opt" value="1">10k</option>
                 <option class="form-select-opt"value="2">100k</option>
                 <option class="form-select-opt" value="3">1000k</option>
             </select>
             <textarea class="footer--form-textarea" placeholder="Wiadomość"></textarea>
-            <label class="footer--form-check"><input type="checkbox">Zapoznałem(-łam) się z Polityką prywatności oraz z Zastrzeżeniami
-                prawnymi.</label>
+            <label class="footer--form-checkbox">
+                <input class="checkbox-input" id="checkbox-elem" type="checkbox">
+                <span class="checkbox-label-text">
+                    <div class="checkmark"></div>
+                    Zapoznałem(-łam) się z 
+                    <a href="#" class="check-link">Polityką prywatności</a> 
+                    oraz z 
+                    <a href="#" class="check-link">Zastrzeżeniami prawnymi</a>.
+                </span>
+            </label>
             <input class="footer--form-submit" type="submit" class="submit-arrow" value="WYŚLIJ">
         </form>
     </footer>

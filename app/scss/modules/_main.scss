@@ -44,8 +44,11 @@
             width: 50%;
         }
 
+        @media all and (max-width: 1024px) {
+            margin-bottom: 170px;
+        }
+
         @media all and (max-width: 768px) {
-            padding: calc(0.5 * 13%);
         }
 
         @media all and (max-width: 575px) {
